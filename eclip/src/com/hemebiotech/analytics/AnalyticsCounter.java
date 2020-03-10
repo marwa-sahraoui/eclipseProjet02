@@ -17,7 +17,7 @@ public class AnalyticsCounter {
 		Map<String, Integer> mySymptomsOccrrenceMap = myReader.nbSymtomFromJavaList(listSymptoms);
 		
 		
-		//4. Ecrire le dictionnaire des symptomes et les occurrence dans un fichioer de sortie
+		//3. Ecrire le dictionnaire des symptomes et les occurrence dans un fichioer de sortie
 		
 		myReader.writeDictionaryFile(mySymptomsOccrrenceMap, "result.txt");
 		
