@@ -19,7 +19,7 @@ public class AnalyticsCounter {
 		
 		//3. Ecrire le dictionnaire des symptomes et les occurrence dans un fichioer de sortie
 		
-		myReader.writeDictionaryFile(mySymptomsOccrrenceMap, "result.txt");
+		myReader.writeDictionaryFile(mySymptomsOccrrenceMap, "/Users/marwa/Desktop/result.txt");
 		
 	 
 	}
