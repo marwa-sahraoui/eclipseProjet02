@@ -1,11 +1,12 @@
-package com.hemebiotech.analytics;
+   package com.hemebiotech.analytics;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
 public class AnalyticsCounter {
 	
-	public static void main(String args[]) throws Exception {
+	public static void main(String args[])  {
 		
 		//objet reader sur le fichier d'entrée
 		ReadSymptomDataFromFile myReader = new ReadSymptomDataFromFile("symptoms.txt");
@@ -19,7 +20,11 @@ public class AnalyticsCounter {
 		
 		//3. Ecrire le dictionnaire des symptomes et les occurrence dans un fichioer de sortie
 		
-		myReader.writeDictionaryFile(mySymptomsOccrrenceMap, "/Users/marwa/Desktop/result.txt");
+		try {
+			myReader.writeDictionaryFile(mySymptomsOccrrenceMap, "/Users/marwa/Desktop/result.txt");
+		} catch (IOException e) {
+			System.out.println("Le fichier de sortie n'existe pas. Veuillez réessayer..");
+		}
 		
 	 
 	}

@@ -18,7 +18,7 @@ import java.util.TreeMap;
 public class ReadSymptomDataFromFile implements ISymptomReader {
 
 	private String filepath;
-
+ 
 	/**
 	 * 
 	 * @param filepath a full or partial path to file with symptom strings in it,
@@ -68,7 +68,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 
 	}
 
-	public void writeDictionaryFile(Map<String, Integer> resultat, String fileName) throws Exception {
+	public void writeDictionaryFile(Map<String, Integer> resultat, String fileName) throws IOException {
 
 		FileWriter writer = new FileWriter(fileName);
 
