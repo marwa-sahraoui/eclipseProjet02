@@ -18,7 +18,7 @@ import java.util.TreeMap;
 public class ReadSymptomDataFromFile implements ISymptomReader {
 
 	private String filepath;
-
+ 
 	/**
 	 * 
 	 * @param filepath a full or partial path to file with symptom strings in it,
@@ -30,7 +30,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 
 	@Override
 	public List<String> GetSymptoms() {
-		ArrayList<String> result = new ArrayList<String>();
+		List<String> result = new ArrayList<String>();
 
 		if (filepath != null) {
 			try {
@@ -50,7 +50,7 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 		return result;
 	}
 
-	public Map<String, Integer> nbSymtomFromJavaList(List<String> mySymptomsList) {
+	public Map<String, Integer> numberOfSymptomFromList(List<String> mySymptomsList) {
 
 		Map<String, Integer> resultat = new HashMap<String, Integer>();
 
@@ -62,13 +62,13 @@ public class ReadSymptomDataFromFile implements ISymptomReader {
 
 		}
 
-		TreeMap<String, Integer> sortedMap = new TreeMap<>(resultat);
+		Map<String, Integer> sortedMap = new TreeMap<>(resultat);
 
 		return sortedMap;
 
 	}
 
-	public void writeDictionaryFile(Map<String, Integer> resultat, String fileName) throws Exception {
+	public void writeDictionaryFile(Map<String, Integer> resultat, String fileName) throws IOException {
 
 		FileWriter writer = new FileWriter(fileName);
 

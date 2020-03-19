@@ -1,5 +1,6 @@
 package com.hemebiotech.analytics;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Map;
 
@@ -19,10 +20,8 @@ public interface ISymptomReader {
 	 */
 	List<String> GetSymptoms ();
 	
-	Map<String, Integer> nbSymtomFromJavaList(List<String> mySymtomList);
+	Map<String, Integer> numberOfSymptomFromList(List<String> mySymtomList);
 	
-	
-	public void writeDictionaryFile(Map<String, Integer> resultat, String fileName) throws Exception;
-	
+	void writeDictionaryFile(Map<String, Integer> resultat, String fileName) throws IOException;
 	
 }
